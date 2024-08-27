@@ -25,12 +25,13 @@ const NavBar = () => {
         <div className="w-full absoulte top-0 flex justify-between items-center py-4 px-8">
             {/* LOGO */}
             <div className="flex items-center">
-                <Image
-                    src="/logo.png" // Replace with your logo image path
-                    alt="Logo"
-                    width={50}
-                    height={50}
-                />
+            <Image
+                src="/icons/A2SV_logo.svg"
+                alt="Logo"
+                width={150}
+                height={150}
+            />
+            
             </div>
 
             {/* NAVIGATIONS */}
@@ -41,7 +42,7 @@ const NavBar = () => {
                             {navItem.title}
                             {/* Blue line under active link */}
                             {isActive(navItem.url) && (
-                                <div className="w-full h-1 bg-blue-600 mt-1"></div>
+                                <div className="w-full h-1 rounded-md bg-blue-600 mt-1"></div>
                             )}
                             
                         </div>

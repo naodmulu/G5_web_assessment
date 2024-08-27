@@ -29,25 +29,27 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col absolute bottom-0 bg-gray-100 py-12 px-8">
+    <div className="w-full flex flex-col absolute bottom-0 py-12 px-8">
       {/* Support Us Section */}
-      <div className=" flex gap-4 px-4">
-        <div className="flex justify-center mb-6">
+      <div className=" flex gap-4 px-4 border-y py-4 border-gray-300">
+        <div className="flex justify-around mb-6 px-4">
           <Image
-            src="/support-us.png" // Replace with your support image
+            src="/icons/Support.svg" // Replace with your support image
             alt="Support Us"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
           />
-        </div>
-        <div className='flex flex-col w-[30%]'>
-        <h2 className="text-2xl font-semibold">Support Us</h2>
-        <p className="mt-4 text-wrap text-gray-700">
-          Join us in our mission to empower the next generation of leaders from Africa to Silicon Valley.
-        </p>
+          <div className="text-center p-6">
+              <h2 className="text-lg font-semibold mb-4">
+                  Get involved in improving tech education in Africa!
+              </h2>
+              <button className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition">
+                  Support Us
+              </button>
+          </div>
         </div>
         {/* Navigation, Teams, Blogs Links */}
-        <div className="flex justify-between gap-8">
+        <div className="flex justify-around w-[70%] mb-7">
           {/* Navigation Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>

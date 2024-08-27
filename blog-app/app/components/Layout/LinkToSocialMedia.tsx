@@ -14,24 +14,26 @@ const LinkToSocialMedia = () => {
     ];
 
     return (
-        <div className='w-full py-2 px-8 flex justify-between'>
+        <div className='w-full py-2 px-4 mx-4 flex justify-between items-center '>
             {/* Rights reserved */}
-            <div className="mb-4">
+            <div className="text-gray-700">
                 &copy; 2020 Africa to Silicon Valley, Inc. All rights reserved.
             </div>
 
             {/* Social Media Links */}
-            <div className="flex justify-center gap-x-6">
+            <div className="flex px-5 gap-x-6">
                 {links.map((link, index) => (
                     <Link
                         key={index}
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-700 bg-red-900 hover:text-blue-600"
+                        className="text-[#9CA3AF] hover:text-blue-600"
                     >
-                        .
-                        <FontAwesomeIcon alt={link.name} icon={link.icon} size="lg" />
+                        <div className='w-6'>
+                            
+                        <FontAwesomeIcon aria-label={link.name} icon={link.icon} size="lg" />
+                        </div>
                     </Link>
                 ))}
             </div>
