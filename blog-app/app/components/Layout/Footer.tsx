@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col absolute bottom-0 py-12 px-8">
+    <div className="w-full flex flex-col  py-12 px-8">
       {/* Support Us Section */}
       <div className=" flex gap-4 px-4 border-y py-4 border-gray-300">
         <div className="flex justify-around mb-6 px-4">
