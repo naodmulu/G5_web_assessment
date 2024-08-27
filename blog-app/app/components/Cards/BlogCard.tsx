@@ -49,11 +49,11 @@ const BlogCard = () => {
             {/* Blog Image */}
             <div className="flex items-center">
                 <Image
-                    src="/images/Blog_picture.png"
-                    height={100}
+                    src="/icons/blog_picture.svg"
+                    height={200}
                     width={100}
                     alt="Blog contents"
-                    className="w-[300px] h-[200px] rounded"
+                    className="w-[300px] h-[300px] rounded"
                 />
             </div>
 
