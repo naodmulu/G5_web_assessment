@@ -1,9 +1,25 @@
-import React from 'react';
+"use client";
+import React, { useEffect } from 'react';
 import BlogCard from '../Cards/BlogCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/app/Redux/store';
+import { fetchBlogs } from '@/app/Redux/Slices/blogSlices';
+import { Blog } from '@/types/BlogListValue';
 
-const BlogsContainer = () => {
+const BlogsContainer: React.FC = () => {
+  const dispatch = useDispatch();
+  const { blogs, loading, error } = useSelector((state: RootState) => state.blogs);
+
+  useEffect(() => {
+    dispatch(fetchBlogs());
+  }, [dispatch]);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
+  console.log("blogs",blogs)
+
   return (
     <div className='flex flex-col items-center p-5'>
       <h1 className='text-2xl font-bold mb-4 self-start'>Blogs</h1>
@@ -25,10 +41,9 @@ const BlogsContainer = () => {
 
       {/* Blog Cards */}
       <div className='w-full max-w-4xl flex flex-wrap gap-0'>
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        {/* Add more BlogCard components as needed */}
+        {blogs.map((blog: Blog) => (
+          <BlogCard key={blog._id} blog={blog} />
+        ))}
       </div>
     </div>
   );
