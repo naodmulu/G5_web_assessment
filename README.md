@@ -62,12 +62,12 @@ The project uses Tailwind CSS for styling. To configure Tailwind:
 
 ### Pages
 - **Home Page**:
-  ![BlogList](assets/Bloglist.png)
-  ![Footer](assets/footer.png)
+  ![BlogList](assets/Bloglist1.png)
+  ![Footer](assets/footer1.png)
   
 - **Discription Page**:
-  ![BlogDiscription](assets/blogdiscription.png)
-  ![RelatedBlogs](assets/relatedblogs.png)
+  ![BlogDiscription](assets/blogdiscription1.png)
+  ![RelatedBlogs](assets/relatedblogs1.png)
 
 
 - **Font not loading**: Ensure that the font links in the `Head` component are correct and accessible.
